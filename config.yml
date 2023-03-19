@@ -14,7 +14,7 @@ EAB_HMAC_KEY: ""
 CLOUDFLARE_API_TOKEN: ""
 CLOUDFLARE_ZONE_ID: ""
 
-SAVING_CER_PATH: "ssl.cer"
-SAVING_KEY_PATH: "ssl.key"
+SAVING_CER_PATH: "C:\\nginx\\certs\\ssl.cer"
+SAVING_KEY_PATH: "C:\\nginx\\certs\\ssl.key"
 AFTER_SETUP_SCRIPT: ""
 
