@@ -10,6 +10,8 @@ import (
 
 func main() {
 	next := time.Now()
+	next = next.Add(3 * time.Second)
+
 	ticker := time.Tick(time.Until(next))
 	for range ticker {
 		// call your function or run your task here
