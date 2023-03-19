@@ -67,10 +67,8 @@ func (auth *CloudflareAuth) UpdateOrInsertChallengeRecord(ctx context.Context, n
 }
 
 func (auth *CloudflareAuth) DelChallengeRecord(ctx context.Context) {
-	fmt.Println("Running DelChallengeRecord!!")
-
 	recordIds := auth.ListChallengeRecord(ctx)
-	if recordIds != nil {
+	if recordIds == nil {
 		return
 	}
 
@@ -78,6 +76,7 @@ func (auth *CloudflareAuth) DelChallengeRecord(ctx context.Context) {
 		auth.setup()
 	}
 
+	fmt.Println("Running DelChallengeRecord!!")
 	resC := cloudflare.ResourceContainer{Level: cloudflare.RouteLevel("zones"), Identifier: auth.CloudflareZoneId}
 	for _, id := range recordIds {
 		err := auth.api.DeleteDNSRecord(ctx, &resC, id)
