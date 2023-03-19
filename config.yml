@@ -1,0 +1,20 @@
+domains:
+  - "example.com"
+  - "*.example.com"
+directory: "https://acme-v02.api.letsencrypt.org/directory"
+#directory: "https://dv.acme-v02.api.pki.goog/directory"
+#directory: "https://acme.zerossl.com/v2/DV90"
+reginfo: ""
+
+#todo
+EAB_KEY_ID: ""
+#todo
+EAB_HMAC_KEY: ""
+
+CLOUDFLARE_API_TOKEN: ""
+CLOUDFLARE_ZONE_ID: ""
+
+SAVING_CER_PATH: "ssl.cer"
+SAVING_KEY_PATH: "ssl.key"
+AFTER_SETUP_SCRIPT: ""
+
