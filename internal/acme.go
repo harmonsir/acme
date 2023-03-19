@@ -46,7 +46,7 @@ func (p *Prober) fulfill(ctx context.Context, z *acme.Authorization) error {
 	case "dns-01":
 		result := p.runDNS01(ctx, z, chal)
 		p.CfAuth.DelChallengeRecord(ctx)
-		fmt.Println("do cleaned!!")
+		fmt.Println("done clean!!")
 		return result
 	default:
 		return fmt.Errorf("unknown challenge type %q", chal.Type)

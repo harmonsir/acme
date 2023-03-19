@@ -67,6 +67,8 @@ func (auth *CloudflareAuth) UpdateOrInsertChallengeRecord(ctx context.Context, n
 }
 
 func (auth *CloudflareAuth) DelChallengeRecord(ctx context.Context) {
+	fmt.Println("Running DelChallengeRecord!!")
+
 	recordIds := auth.ListChallengeRecord(ctx)
 	if recordIds != nil {
 		return
